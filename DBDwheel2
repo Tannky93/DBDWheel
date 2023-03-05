@@ -1,3 +1,11 @@
+<style>
+	html, body, #page {
+		margin:0;
+		padding:0;
+		overflow:hidden;
+	}
+</style>
+
 <canvas id="wheelCanvas" width="600" height="800" style= "display: block";></canvas>
 
 <img width="400" height="400" src="http://upload.wikimedia.org/wikipedia/commons/7/7d/European_roulette_wheel.svg" />
