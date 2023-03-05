@@ -6,7 +6,7 @@
 	}
 </style>
 
-<canvas id="wheelCanvas" width="600" height="800" style= "display: block";></canvas>
+//<canvas id="wheelCanvas" width="600" height="800" style= "display: block";></canvas>
 <noscript>No script? :(</noscript>
 
 <img width="600" height="800" src="http://upload.wikimedia.org/wikipedia/commons/7/7d/European_roulette_wheel.svg" />
@@ -19,7 +19,7 @@ img {
 	img.addEventListener('click', onClick, false);
 
 
-	function onLoad() {
+	window.onload() {
     		this.removeAttribute('style');
     
     		var deg = 500 + Math.round(Math.random() * 500);
