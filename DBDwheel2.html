@@ -4,16 +4,17 @@
 		padding:0;
 		overflow:hidden;
 	}
+	img{
+   	 -webkit-transition: -webkit-transform 2s ease-out;
+	}
 </style>
 
-//<canvas id="wheelCanvas" width="600" height="800" style= "display: block";></canvas>
+<!--<canvas id="wheelCanvas" width="600" height="800" style= "display: block";></canvas>-->
 <noscript>No script? :(</noscript>
 
 <img width="600" height="800" src="http://upload.wikimedia.org/wikipedia/commons/7/7d/European_roulette_wheel.svg" />
 
-img {
-    -webkit-transition: -webkit-transform 2s ease-out;
-}
+
 <script>
 	var img = document.querySelector('img');
 	img.addEventListener('click', onClick, false);
