@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
-<div>
-  <img src= "/Image/Ace.gif">
+  <head>
+    <style>
+      .div{
+        height:600px;
+        width:600;
+        overflow:hidden;
+      }
+      .background{
+        z-index:0
+        position:absolute;
+      }
+      .foreground{
+        z-index:1
+        position:absolute;
+      }
+      
+    </style>
+  </head>
+  
+<div style = "height:200px">
+  <img id = "changeable" src= "/Image/Ace.gif" class = "background">
+  <!--<img id = "unicorn" src= "/Image/Ace.gif" class = "background">-->
+  <!--<img id = "rainbow" src= "/Image/Ace.gif" class = "background">-->
+  <img id = "bush1" src= "/Image/mainBush.gif" class = "foreground">
+  <!--<img id = "bush2" src= "/Image/Ace.gif" class = "foreground">-->
 </div>
 
   
