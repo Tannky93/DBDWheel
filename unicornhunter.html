@@ -27,6 +27,25 @@
   <img id = "bush1" src= "/Image/mainBush.gif" class = "foreground">
   
 </div>
+  
+  
+ <script>
+   window.onload = function() {
+		const urlParams = new URLSearchParams(window.location.search);
+		console.log(urlParams.has("test"))
+		
+		function parseParam(str) {
+			return String(str).replace(/[\r]/g, '')
+		}
+	
+		var requestedimg = parseParam(urlParams.get("result") || 1)
+	  var img = document.getElementById("changeable");
+     
+     img.src = "/Image/"+requestedimg+".gif"
+     
+   }
+   
+  </script>
 
   
 </html>
