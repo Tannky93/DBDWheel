@@ -1,0 +1,54 @@
+.taco {
+  			width: 100%;
+  			height: 25%;
+  			animation: pulse 5s infinite;
+			}
+
+			@keyframes pulse {
+  				0%,100% {
+    					background-color: #93EC13;
+  				}
+				50% {
+   			 		background-color: #1295E3;
+  				}
+			}
+
+			html,
+			body {
+  				height: 100%;
+			}
+		
+		
+		.taco2 {
+  			height: 25%;
+  			width: 100%;
+  			margin: 0 auto;
+  			background-color: red;
+  			animation-name: stretch;
+  			animation-duration: 1.5s; 
+  			animation-timing-function: ease-out; 
+  			animation-delay: 4.5s;
+  			animation-direction: alternate;
+  			animation-iteration-count: 3;
+  			animation-fill-mode: none;
+  			animation-play-state: running;
+			}
+
+		@keyframes stretch {
+  			0% {
+    				transform: scale(.3);
+    				background-color: #93EC13;
+    				border-radius: 100%;
+  			}
+ 			 50% {
+    				background-color: #1295E3;
+  			}
+  			100% {
+    				transform: scale(1);
+   			 	background-color: #93EC13;
+  			}
+		body {
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
