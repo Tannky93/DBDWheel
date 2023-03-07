@@ -17,22 +17,18 @@
       return function () {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         ctx.drawImage(img, x, y);
-        
-        x += 1;
-        
-        
+       
         if (x >= 0 && x < ctx.canvas.width && right == false){
           x += 1;
         }
-        if (x > = ctx.canvas.width){
+        if (x >= ctx.canvas.width){
           right = true;
         }
-        if (x > ctx.canvas.width && x >= ctx.canvas.width && right == true ) {
+        if (x > 0 && x < ctx.canvas.width && right == true ) {
           x -= 1;
         }
         if( x <= 0){
           right = false;
-        }
         }
       };
     }(), 1000/40);
