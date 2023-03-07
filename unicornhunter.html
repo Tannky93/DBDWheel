@@ -3,36 +3,28 @@
   <head>
     <style>
       .divdisp {
-        height:600px;
-        width:500px;
-        position:relative;
+        
       }
       .background{
-        width:100%;
-        height:100%;
-        postion:absolute;
+        position: relative;
+        top: 0;
+        left: 0;
       }
       .foreground{
         position: absolute;
-        height:30%;
-        width:100%;
-        bottom:5;
-        left:5;
+        top: 5px;
+        left: 5px;
       }
       
     </style>
   </head>
   
-<div class = "divdisp">
-  <div class = "background">
-  <img id = "changeable" src= "/Image/Ace.gif">
-  <!--<img id = "unicorn" src= "/Image/Ace.gif" class = "background">-->
-  <!--<img id = "rainbow" src= "/Image/Ace.gif" class = "background">-->
-  </div>
-  <div class = "foreground">
-  <img id = "bush1" src= "/Image/mainBush.gif">
-  <!--<img id = "bush2" src= "/Image/Ace.gif" class = "foreground">-->
-  </div>
+<div style = "position: relative; left: 0; top: 0;">
+  <img id = "changeable" src= "/Image/Ace.gif" class = "background">
+
+
+  <img id = "bush1" src= "/Image/mainBush.gif" class = "foreground">
+  
 </div>
 
   
