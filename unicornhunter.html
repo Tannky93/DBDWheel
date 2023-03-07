@@ -41,10 +41,14 @@
 		var requestedimg = parseParam(urlParams.get("result") || 1)
 	  	var img = document.getElementById("changeable");
      
-     		img.src = "/Image/"+requestedimg+".gif"
-	  	console.log("/Image/"+requestedimg+".gif")
-	   	img.animate({height:'hide'}, "fast");
-	   	img.animate({height: 'show'},30000);
+     		img.src = "/Image/"+requestedimg+".gif";
+	  	console.log("/Image/"+requestedimg+".gif");
+	   
+	   	$(document).ready(function(){
+		var img2 = $("#lastname");
+	   	img2.animate({height:'hide'}, "fast");
+	   	img2.animate({height: 'show'},30000);
+		}
      
    }
    
