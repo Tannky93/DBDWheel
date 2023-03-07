@@ -18,14 +18,15 @@
         ctx.drawImage(img, x, y);
         
         x += 1;
+        y -= 1;
         if (x > ctx.canvas.width) {
-          x -=1;
+          x -= 1;
         }
         if (y > ctx.canvas.height){
-          y +=1;
+          y -= 1;
         }
         if(ctx.canvas.height > y){
-          y-=1;
+          y += 1;
         }
       };
     }(), 1000/40);
