@@ -39,10 +39,12 @@
 		}
 	
 		var requestedimg = parseParam(urlParams.get("result") || 1)
-	  var img = document.getElementById("changeable");
+	  	var img = document.getElementById("changeable");
      
-     img.src = "/Image/"+requestedimg+".gif"
-	  console.log("/Image/"+requestedimg+".gif")
+     		img.src = "/Image/"+requestedimg+".gif"
+	  	console.log("/Image/"+requestedimg+".gif")
+	   	img.animate({height: '20px', opacity: '0.1'}, "fast");
+	   	img.animate({height: '400px', opacity: '0.1'}, "slow");
      
    }
    
