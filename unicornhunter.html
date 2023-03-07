@@ -9,18 +9,11 @@
   
   img.src = '/Image/Ace.gif';
   img.addEventListener('load', function () {
-
-    var interval = setInterval(function() {
+    
       var x = 600, y = 800;
-      const right = new Boolean(false);
-      
-      return function () {
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-        ctx.drawImage(img, x, y);
-       
-        ;
-      };
-    }(), 1000/40);
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      ctx.drawImage(img, x, y);
+
   }, false);
 }, false);
 </script>
