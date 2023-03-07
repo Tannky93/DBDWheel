@@ -12,21 +12,27 @@
 
     var interval = setInterval(function() {
       var x = 0, y = 0;
+      const right = new Boolean(false);
       
       return function () {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         ctx.drawImage(img, x, y);
         
         x += 1;
-        y -= 1;
-        if (x > ctx.canvas.width) {
+        
+        
+        if (x >= 0 && x < ctx.canvas.width && right == false){
+          x += 1;
+        }
+        if (x > = ctx.canvas.width){
+          right = true;
+        }
+        if (x > ctx.canvas.width && x >= ctx.canvas.width && right == true ) {
           x -= 1;
         }
-        if (y > ctx.canvas.height){
-          y -= 1;
+        if( x <= 0){
+          right = false;
         }
-        if(ctx.canvas.height > y){
-          y += 1;
         }
       };
     }(), 1000/40);
