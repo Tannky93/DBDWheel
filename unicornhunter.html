@@ -72,7 +72,7 @@ window.onload = function() {
   }
 	  
   function delay(seconds) {
-    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+    return new Promise(resolve => setTimeout(resolve, seconds));
   }
 	
   function createImage(imgId,classString,source){
@@ -105,7 +105,7 @@ window.onload = function() {
     createImage("bush","foreground","/Image/mainBush.gif");
 	  
     var img = document.getElementById("changeable");
-    var delaytime = 10;
+    var delaytime = 10000;
      
     img.src = "/Image/"+requestedimg+".gif";
     console.log("/Image/"+requestedimg+".gif");
