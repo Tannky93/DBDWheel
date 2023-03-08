@@ -12,13 +12,13 @@
 	z-index:-3;
       }
       .backgroundl2{
-        position: relative;
+        position: absolute;
         top: 0px;
         left: 0px;
 	z-index:-2;
       }
       .backgroundl1{
-        position: relative;
+        position: absolute;
         top: 0px;
         left: 0px;
 	z-index:-1;
@@ -98,7 +98,39 @@ window.onload = function() {
   });*/
 
   if (requestedimg == "unicorn"){
-    	
+	  
+    createImage("clouds","background","/Image/clouds.gif");
+    createImage("rainbow","backgroundl2","/Image/rainbow.gif");
+    createImage("fireworks","backgroundl1","/Image/fireworks.gif");
+    createImage("changeable","midground","/Image/blank.png");
+
+    createImage("bush","foreground","/Image/mainBush.gif");
+	  
+	  
+    var img = document.getElementById("changeable");
+    var delaytime = 10000;
+     
+    img.src = "/Image/"+requestedimg+".gif";
+    console.log("/Image/"+requestedimg+".gif");
+    $(document).ready(function(){
+      var img2 = $("#changeable");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });	
+	  
+    $(document).ready(function(){
+      var img2 = $("#rainbow");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });	 
+    $(document).ready(function(){
+      var img2 = $("#fireworks");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });	 
 				
 			
   } else if (requestedimg != "unicorn"){
