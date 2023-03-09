@@ -23,6 +23,7 @@
       var date = parseParam(urlParams.get("date")||0);
       var responseValid = "valid";
       var responseInvalid = "invalid";
+      var fs = require('fs');
       
       function fileCheck(date){
         fs.writeFile( date+'.txt',"Hello NodeJS",(err) => {
