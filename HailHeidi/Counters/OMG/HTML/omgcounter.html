@@ -7,7 +7,7 @@
   <script>
     window.onload = function() {
       const urlParams = new URLSearchParams(window.location.search);
-      console.log(urlParams.has("test"))
+      console.log(urlParams.has("test"));
 		
       function parseParam(str) {
         return String(str).replace(/[\r]/g, '')
@@ -57,6 +57,8 @@
       }
       
       fileCheck(date);
+	    
+    }
       
     
     
