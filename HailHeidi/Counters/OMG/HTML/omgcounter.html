@@ -5,6 +5,60 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script>
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      console.log(urlParams.has("test"))
+		
+      function parseParam(str) {
+        return String(str).replace(/[\r]/g, '')
+      }
+	  
+     /*function delay(seconds) {
+        return new Promise(resolve => setTimeout(resolve, seconds));
+      }*/
+	
+      var funcselect = parseParam(urlParams.get("func") || "Check");
+      var value = parseParam(urlParams.get("value") || 1);
+      var auth = parseParam(urlParams.get("auth") || false);
+      var date = parseParam(urlParams.get("date")||0);
+      var responseValid = "valid";
+      var responseInvalid = "invalid";
+      
+      function fileCheck(date){
+        fs.writeFile( date+'.txt',"Hello NodeJS",(err) => {
+        if(err) throw err;
+          console.log("File has been saved!");
+        });
+      
+      }
+      
+      function checkScore(){
+      
+      }
+      
+      function addValue(value){
+        
+      }
+      
+      function removeValue(value, auth){
+      
+      }
+      
+      function saveFile(date, auth){
+      
+      }
+      
+      function recallHiscore(date, auth){
+      
+      }
+      
+      function response(newValue){
+      
+      }
+      
+      fileCheck();
+      
+    
     
   </script>
   
