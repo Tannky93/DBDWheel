@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> UnicrnTaco - Unicorn Hunter </title>
+	  
+    <style>
+	    
+      .background{
+        position: relative;
+        top: 0px;
+        left: 0px;
+	z-index:-3;
+      }
+      .backgroundl2{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+	z-index:-2;
+      }
+      .backgroundl1{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+	z-index:-1;
+      }    
+      .midground{
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+	z-index:0;
+      }
+     .midgroundUnicorn{
+        position: absolute;
+        bottom: 20px;
+        left: 60px;
+	z-index:0;
+      } 
+      .foregroundl1{ 
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+	z-index:1;
+      }
+      .foregroundl2{
+        
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+	z-index:2;
+      }
+      .foreground{
+        
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+	z-index:3;
+      }
+      
+    </style>
+  </head>
+  
+  <div id="imageDiv" style = "position: relative; left: 0; top: 0;">
+	
+  <!-- <img id = "clouds" src= "/Image/clouds.gif" class = "background">
+	
+  <img id = "changeable" src = "/Image/blank.png" class = "midground">
+	
+  <img id = "bush1" src= "/Image/mainBush.gif" class = "foreground"> -->
+  
+  </div>
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.has("test"))
+		
+  function parseParam(str) {
+    return String(str).replace(/[\r]/g, '')
+  }
+	  
+  function delay(seconds) {
+    return new Promise(resolve => setTimeout(resolve, seconds));
+  }
+	
+  function createImage(imgId,classString,source){
+    var img = document.createElement("img");
+	  img.id = imgId;
+	  img.className = classString;
+	  img.src = source;
+	  document.getElementById("imageDiv").appendChild(img);
+	  
+  }
+	
+  var requestedimg = parseParam(urlParams.get("result") || 1)
+
+	   
+ /* $(document).ready(function(){
+    var img2 = $("#changeable");
+    img2.animate({opacity: '0.0'}, "fast");
+    img2.animate({opacity: '0.0'}, 10000);
+    img2.animate({opacity: '1.0'},'fast');
+  });*/
+
+  if (requestedimg == "unicorn"){
+	  
+    createImage("clouds","background","/Image/clouds.gif");
+    createImage("rainbow","backgroundl2","/Image/rainbow.gif");
+    createImage("fireworks","backgroundl1","/Image/fireworks.gif");
+    createImage("changeable","midgroundUnicorn","/Image/blank.png");
+
+    createImage("bush","foreground","/Image/mainBush.gif");
+	  
+	  
+    var img = document.getElementById("changeable");
+    var delaytime = 10000;
+     
+    img.src = "/Image/"+requestedimg+".gif";
+    console.log("/Image/"+requestedimg+".gif");
+	  
+    $(document).ready(function(){
+      var img2 = $("#changeable");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });	
+	  
+    $(document).ready(function(){
+      var img2 = $("#rainbow");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });	 
+    $(document).ready(function(){
+      var img2 = $("#fireworks");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });	 
+				
+			
+  } else if (requestedimg != "unicorn"){
+    
+    createImage("clouds","background","/Image/clouds.gif");
+    createImage("changeable","midground","/Image/blank.png");
+    createImage("bush","foreground","/Image/mainBush.gif");
+	  
+    var img = document.getElementById("changeable");
+    var delaytime = 10000;
+     
+    img.src = "/Image/"+requestedimg+".gif";
+    console.log("/Image/"+requestedimg+".gif");
+    $(document).ready(function(){
+      var img2 = $("#changeable");
+      img2.animate({opacity: '0.0'}, "fast");
+      delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
+      
+    });			
+  }
+};
+   
+</script>
+
+  
+</html>
