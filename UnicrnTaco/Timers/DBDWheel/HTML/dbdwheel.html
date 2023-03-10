@@ -43,7 +43,14 @@
       </div>
     </div>
     <script>
+      
       setInterval(()=>{
+        
+        let day_dot = document.querySelector('.days_dot');
+        let hour_dot = document.querySelector('.hour_dot');
+        let min_dot = document.querySelector('.min_dot');
+        let sec_dot = document.querySelector('.sec_dot');
+        
         let dd = document.getElementById('dd');
         let hh = document.getElementById('hh');
         let mm = document.getElementById('mm');
@@ -63,6 +70,12 @@
         hours.innerHTML = h + "<span> Hours<span>";
         mins.innerHTML = m + "<span> Mins<span>";
         secs.innerHTML = s + "<span> Secs<span>";
+        
+        day_dot.style.transform = rotateZ($({d*12})deg);
+        hour_dot.style.transform = rotateZ($({d*12})deg);
+        min_dot.style.transform = rotateZ($({d*12})deg);
+        sec_dot.style.transform = rotateZ($({d*12})deg);
+      
       })
       
     </script>
