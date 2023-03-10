@@ -86,6 +86,21 @@ body
   stroke-dasharray:400;
   stroke-dashoffset:400;
 }
+#time
+{
+  position: absolute;
+  text-align: center;
+  font-weight:500;
+  color:#fff;
+  font-size:1em;
+}
+#time span
+{
+  position:absolute;
+  font-size:0.75em;
+  font-weight:300;
+  letter-spacing: 0.1em;
+}
 
 
 
