@@ -1,1 +1,61 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Taco Timer DBDwheel</title>
+    <link rel="stylesheet" href="../CSS/dbdwheelstyle.css">
+  </head>
+  <body>
+    <div id="timer">
+      <div class="circle" style="--clr:#ff2972">
+        <div class="dots sec_dots"> </div>
+        <svg>
+          <circle cx="120" cy="120", r="120" id ="ss"></circle>
+        </svg
+      </div>
+      <div class="circle" style="--clr:#fee800">
+        <div class="dots min_dots"> </div>
+        <svg>
+          <circle cx="100" cy="100", r="100" id ="mm"></circle>
+        </svg
+      </div>
+      <div class="circle" style="--clr:#04fc43">
+        <div class="dots hour_dots"> </div>
+        <svg>
+          <circle cx="80" cy="80", r="80" id ="hh"></circle>
+        </svg
+      </div>
+      <div class="circle" style="--clr:#ffffff">
+        <div class="dots days_dots"> </div>
+        <svg>
+          <circle cx="60" cy="60", r="60" id ="dd"></circle>
+        </svg
+      </div>
+    </div>
+    <script>
+      setInterval(()=>{
+        let dd = documnet.getElementById('#dd');
+        let hh = documnet.getElementById('#hh');
+        let mm = documnet.getElementById('#mm');
+        let ss = documnet.getElementById('#ss');
+      
+        let d = new Date().getDate();
+        let h = new Date().getHours();
+        let m = new Date().getMinutes()
+        let s = new Date().getSeconds();
+      
+        dd.style.strokeDashoffset = 400 - (400 * d);
+        hh.style.strokeDashoffset = 510 - (510 * h)/24;
+        mm.style.strokeDashoffset = 630 - (630 * m)/60;
+        ss.style.strokeDashoffset = 760 - (760 * s)/60;
+      })
+      
+    </script>
+  </body>
+</html>
+        
+        
+        
+        
+        
+        
