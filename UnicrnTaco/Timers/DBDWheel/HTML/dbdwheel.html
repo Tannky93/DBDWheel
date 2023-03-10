@@ -58,6 +58,11 @@
         hh.style.strokeDashoffset = 510 - (510 * h)/24;
         mm.style.strokeDashoffset = 630 - (630 * m)/60;
         ss.style.strokeDashoffset = 760 - (760 * s)/60;
+        
+        days.innerHTML = d + "<span> Days<span>";
+        hours.innerHTML = h + "<span> Hours<span>";
+        mins.innerHTML = m + "<span> Mins<span>";
+        secs.innerHTML = s + "<span> Secs<span>";
       })
       
     </script>
