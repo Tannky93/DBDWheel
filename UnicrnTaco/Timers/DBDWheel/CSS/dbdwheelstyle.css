@@ -90,6 +90,7 @@ body
 {
   position: absolute;
   text-align: center;
+  transform: translateX(-10px) translateY(0px);
   font-weight:500;
   color:#fff;
   font-size:1em;
@@ -97,6 +98,7 @@ body
 #time span
 {
   position:absolute;
+  transform: translateX(5px) translateY(-3px);
   font-size:0.75em;
   font-weight:300;
   letter-spacing: 0.1em;
