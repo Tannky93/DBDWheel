@@ -48,7 +48,7 @@
         let m = new Date().getMinutes()
         let s = new Date().getSeconds();
       
-        dd.style.strokeDashoffset = 400 - (400 * d);
+        dd.style.strokeDashoffset = 400 - (400 * d)/30;
         hh.style.strokeDashoffset = 510 - (510 * h)/24;
         mm.style.strokeDashoffset = 630 - (630 * m)/60;
         ss.style.strokeDashoffset = 760 - (760 * s)/60;
