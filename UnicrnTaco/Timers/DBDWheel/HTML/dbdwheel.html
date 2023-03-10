@@ -71,10 +71,16 @@
         mins.innerHTML = m + "<span> Mins<span>";
         secs.innerHTML = s + "<span> Secs<span>";
         
-        day_dot.style.transform = rotateZ($({d*12})deg);
-        hour_dot.style.transform = rotateZ($({d*12})deg);
-        min_dot.style.transform = rotateZ($({d*12})deg);
-        sec_dot.style.transform = rotateZ($({d*12})deg);
+        let daydeg = d * 12;
+        let hourdeg = h * 15;
+        let mindeg = m * 6;
+        let secdeg = s * 6;
+        
+        
+        day_dot.style.transform = rotateZ( daydeg +deg);
+        hour_dot.style.transform = rotateZ(hourdeg +deg);
+        min_dot.style.transform = rotateZ(mindeg +deg);
+        sec_dot.style.transform = rotateZ(secdeg +deg);
       
       })
       
