@@ -10,6 +10,7 @@
       <div class="circle" style="--clr:#ff2972">
         <div class="dots sec_dots"> </div>
           <svg>
+            <circle cx="120" cy="120", r="120"></circle>
             <circle cx="120" cy="120", r="120" id ="ss"></circle>
           </svg
         </div>
@@ -17,6 +18,7 @@
       <div class="circle" style="--clr:#fee800">
         <div class="dots min_dots"> </div>
           <svg>
+            <circle cx="100" cy="100", r="100"></circle>
             <circle cx="100" cy="100", r="100" id ="mm"></circle>
           </svg
         </div>
@@ -24,6 +26,7 @@
       <div class="circle" style="--clr:#04fc43">
         <div class="dots hour_dots"> </div>
           <svg>
+            <circle cx="80" cy="80", r="80"></circle>
             <circle cx="80" cy="80", r="80" id ="hh"></circle>
           </svg
         </div>
@@ -31,6 +34,7 @@
       <div class="circle" style="--clr:#ffffff">
         <div class="dots days_dots"> </div>
           <svg>
+            <circle cx="60" cy="60", r="60"></circle>
             <circle cx="60" cy="60", r="60" id ="dd"></circle>
           </svg
         </div>
@@ -46,10 +50,7 @@
       
       setInterval(()=>{
         
-        let day_dot = document.querySelector('.days_dot');
-        let hour_dot = document.querySelector('.hour_dot');
-        let min_dot = document.querySelector('.min_dot');
-        let sec_dot = document.querySelector('.sec_dot');
+     
         
         let dd = document.getElementById('dd');
         let hh = document.getElementById('hh');
@@ -60,6 +61,11 @@
         let h = new Date().getHours();
         let m = new Date().getMinutes()
         let s = new Date().getSeconds();
+        
+        let day_dot = document.querySelector('.days_dot');
+        let hour_dot = document.querySelector('.hour_dot');
+        let min_dot = document.querySelector('.min_dot');
+        let sec_dot = document.querySelector('.sec_dot');
       
         dd.style.strokeDashoffset = 400 - (400 * d)/30;
         hh.style.strokeDashoffset = 510 - (510 * h)/24;
