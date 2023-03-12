@@ -116,11 +116,11 @@ body
 }
 #timer .dots::before
 {
-  content:'';
+  content:' ';
   position:absolute;
   top:0;
-  width:10px;
-  height:10px;
+  width:15px;
+  height:15px;
   background: var(--clr);
   border-radius:50%;
   box-shadow: 0 0 10px var(--clr),
