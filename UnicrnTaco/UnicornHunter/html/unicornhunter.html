@@ -83,6 +83,7 @@ window.onload = function() {
   function delay(seconds) {
     return new Promise(resolve => setTimeout(resolve, seconds));
   }
+  var delaytime = 4000;
 	
   function createImage(imgId,classString,source){
     var img = document.createElement("img");
@@ -114,7 +115,6 @@ window.onload = function() {
 	  
 	  
     var img = document.getElementById("changeable");
-    var delaytime = 10000;
      
     img.src = "../Image/"+requestedimg+".gif";
     console.log("../Image/"+requestedimg+".gif");
@@ -147,7 +147,7 @@ window.onload = function() {
     createImage("bush","foreground","../Image/mainBush.gif");
 	  
     var img = document.getElementById("changeable");
-    var delaytime = 10000;
+    
      
     img.src = "../Image/"+requestedimg+".gif";
     console.log("../Image/"+requestedimg+".gif");
