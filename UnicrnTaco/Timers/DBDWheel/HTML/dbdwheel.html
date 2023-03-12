@@ -65,7 +65,7 @@
         let day_dot = document.querySelector('.days_dots');
         let hour_dot = document.querySelector('.hour_dots');
         let min_dot = document.querySelector('.min_dots');
-        let sec_dot = document.querySelector('sec_dots');
+        let sec_dot = document.querySelector('.sec_dots');
       
         dd.style.strokeDashoffset = 400 - (400 * d)/30;
         hh.style.strokeDashoffset = 510 - (510 * h)/24;
@@ -77,17 +77,15 @@
         mins.innerHTML = m + "<span> Mins<span>";
         secs.innerHTML = s + "<span> Secs<span>";
         
-        let daydeg = d * 12;
-        let hourdeg = h * 15;
-        let mindeg = m * 6;
-        let secdeg = s * 6;
-        
         
         day_dot.style.transform = `rotateZ(${d * 12}deg)`;
+        // 360 deg / 30 days = 12
         hour_dot.style.transform = `rotateZ(${h * 15}deg)`;
+        // 360 deg / 24 hours = 15
         min_dot.style.transform = `rotateZ(${m * 6}deg)`;
-        sec_dot.style.transform = `rotateZ(${m * 6}deg)`;
-      
+        // 360 deg / 60 mins = 6
+        sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
+        // 360 deg / 60 secs = 6
       })
       
     </script>
