@@ -10,7 +10,7 @@
       <div class="circle" style="--clr:#ff2972">
         <div class="dots sec_dots"> </div>
           <svg>
-            <circle cx="120" cy="120", r="120"></circle>
+            <circle cx="120" cy="120", r="120" id = "sec_dot"></circle>
             <circle cx="120" cy="120", r="120" id ="ss"></circle>
           </svg
         </div>
@@ -65,7 +65,7 @@
         let day_dot = document.querySelector('.days_dot');
         let hour_dot = document.querySelector('.hour_dot');
         let min_dot = document.querySelector('.min_dot');
-        let sec_dot = document.querySelector('.sec_dot');
+        let sec_dot = document.getElementbyId('sec_dot');
       
         dd.style.strokeDashoffset = 400 - (400 * d)/30;
         hh.style.strokeDashoffset = 510 - (510 * h)/24;
