@@ -140,7 +140,7 @@ window.onload = function() {
     });	 
 				
 			
-  } else if (requestedimg != "unicorn"){
+  } else if (requestedimg != "unicorn" && requestedimg != 'blank'){
     
     createImage("clouds","background","../Image/clouds.gif");
     createImage("changeable","midground","../Image/blank.png");
@@ -157,6 +157,10 @@ window.onload = function() {
       delay(delaytime).then(() => img2.animate({opacity: '1.0'},'fast'));
       
     });			
+  } else {
+  	  createImage("clouds","background","../Image/clouds.gif");
+    	createImage("changeable","midground","../Image/blank.png");
+    	createImage("bush","foreground","../Image/mainBush.gif");
   }
 };
    
