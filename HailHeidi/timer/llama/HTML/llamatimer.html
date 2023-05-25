@@ -89,6 +89,7 @@
             displayTime(); 
             if (count == 0) {
             playing = false;
+            document.getElementById('time_left').innerHTML = "Finished";
             } else if (playing) {
             setTimeout(countdown, 100);
             count--;
