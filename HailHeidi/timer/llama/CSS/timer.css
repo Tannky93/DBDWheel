@@ -2,19 +2,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
         
         .container{
-            display:flex;
+            display:inline;
             align-content: center;
             width:fit-content;
             /*background-color: grey;*/
         
         }
 
-        p,span{
+        p{
             margin: 20px;
             font-size: 8em;
             font-family: 'Leckerli One', cursive;
             align-content: center;
             color: purple;
+            display:inline;
         }
 
         ul {
