@@ -1,0 +1,40 @@
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+        
+        .container{
+            display:flex;
+            align-content: center;
+            width:fit-content;
+            /*background-color: grey;*/
+        
+        }
+
+        p {
+            margin: 20px;
+            font-size: 8em;
+            font-family: 'Leckerli One', cursive;
+            align-content: center;
+            color: purple;
+        }
+
+        ul {
+            margin: 20px;
+            font-size: 3em;
+            font-family: 'Leckerli One', cursive;
+        }
+
+        li {
+            /*display: inline-block;
+            margin: 0 5px 0;
+            color: white;
+            background-color: black;
+            border-radius: 50px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;*/
+            text-align: center;
+            cursor: pointer;
+            list-style-type: none;
+            
+        } 
+    </style>
