@@ -1,10 +1,18 @@
 <html>
     <style>
+        .container{
+            display:flex;
+            align-content: center;
+            width:fit-content;
+            background-color: grey;
+        
+        }
 
         p {
             margin: 20px;
             font-size: 4em;
             font-family: courier;
+            align-content: center;
             color: purple;
         }
 
@@ -33,6 +41,7 @@
 
     </head>
     <body>
+        <div class="container">
         <p>Llama Timer:</p>
         <p id="time_left"></p>
         <ul>
@@ -41,6 +50,7 @@
         <li id="reset"></li>
         <!--<li id="reset">↺</li>-->
         </ul>
+        </div>
     </body>
 
     <script>
