@@ -1,57 +1,12 @@
 <html>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
-        
-        .container{
-            display:flex;
-            align-content: center;
-            width:fit-content;
-            /*background-color: grey;*/
-        
-        }
-
-        p {
-            margin: 20px;
-            font-size: 8em;
-            font-family: 'Leckerli One', cursive;
-            align-content: center;
-            color: purple;
-        }
-
-        ul {
-            margin: 20px;
-            font-size: 3em;
-            font-family: 'Leckerli One', cursive;
-        }
-
-        li {
-            /*display: inline-block;
-            margin: 0 5px 0;
-            color: white;
-            background-color: black;
-            border-radius: 50px;
-            width: 70px;
-            height: 70px;
-            line-height: 70px;*/
-            text-align: center;
-            cursor: pointer;
-            list-style-type: none;
-            
-        } 
-    </style>
     <head>
+        <title>HailHeidi's Timers</title>
         <link rel="stylesheet" href=../CSS/timer.css>
     </head>
     <body>
         <div class="container">
         <p id="title">Llama Timer:</p>
-        <p id="time_left"></p>
-        <ul>
-        <li id="playpause"></li>
-        <!--<li id="playpause">▶</li>-->
-        <li id="reset"></li>
-        <!--<li id="reset">↺</li>-->
-        </ul>
+            <p id="time_left"></p>
         </div>
     </body>
 
@@ -66,51 +21,33 @@
         reset = document.getElementById('reset');
         title_element = document.getElementById('title');
         var count = time * 10;
-        playpause.onclick = function() {
-            if (playing) {
-                playing = false; 
-                //console.log("Pause!");
-                //playpause.innerHTML = "▶";
-            } else if (!playing) {
-                playing = true; 
-                //console.log("Play!");
-                //playpause.innerHTML = "‖";
-            }
         
-        }
         function getQueryVariable(variable) {
             var query = window.location.search.substring(1);
             var vars = query.split('&');
             for (var i = 0; i < vars.length; i++) {
                 var pair = vars[i].split('=');
                 if (decodeURIComponent(pair[0]) == variable) {
-                return decodeURIComponent(pair[1]);
+                    return decodeURIComponent(pair[1]);
+                }
             }
-        }
-    console.log('Query variable %s not found', variable);
-}
+            console.log('Query variable %s not found', variable);
+            }
 
-        reset.onclick = function() {
-            if (playing) {
-                playing = false; 
-                playpause.innerHTML = "▶";
-            }
-            console.log("Reset Timer!");
-            count = COUNT_START;
-        }
 
         function countdown(){
             displayTime(); 
             if (count == 0) {
-            playing = false;
-            document.getElementById('time_left').innerHTML = "Finished";
+                playing = false;
+                document.getElementById('time_left').innerHTML = "Finished";
             } else if (playing) {
-            setTimeout(countdown, 100);
-            count--;
+                setTimeout(countdown, 100);
+                count--;
             } else {
-            setTimeout(countdown, 100); 
+                setTimeout(countdown, 100); 
             }
         }
+        
         countdown();
 
         function displayTime() {
