@@ -1,0 +1,109 @@
+<html lang="en" style="width:100%;height:150%;font-family:'Lato', sans-serif;font-weight:bold;color:#000000;font-size:150%;@-webkit-keyframes blink {
+    from, to { border-color:transparent;">
+<head>
+<meta charset="utf-8">
+<title>Text Switcher</title>
+</head>
+<body style="width: 100%;
+	height: 200%;
+	font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size:100%;
+  color:black;
+ 
+ 
+  @-webkit-keyframes blink {
+    from, to { border-color: transparent;">
+ 
+  <div>
+    <h3>  <span class="text-switcher"></span></h3>
+  </div>
+ 
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script><script>
+var app = {"textSwitcherTitles":[" >20 min song redeem - $5 1 Sub or 500 Bits",">20 min video redeem - $25 10 Subs or 2500 Bits"]};
+var $ = jQuery;
+(function() {
+  /**
+   * =============
+   * Text Switcher
+   * =============
+   **/
+  if ('textSwitcherTitles' in app) {
+    var $textSwitcher = $('.text-switcher');
+    if ($textSwitcher.length) {
+      var titles = app.textSwitcherTitles,
+          startAfterTimeInterval = 1000;
+      titles.push($textSwitcher.text());
+      $.fn.teletype = function(opts) {
+        var $this = this,
+            defaults = {
+              delayBefore: 0,
+              delayAfter: 0,
+              delayInBetween: 1000,
+              removalDelay: 50,
+              insertionDelay: 50,
+              text: '',
+              before: '',
+              after: ''
+            },
+            settings = $.extend(defaults, opts),
+            oldText = $this.text(),
+            insertCharacter,
+            removeCharacter = function(amount) {
+              setTimeout(function() {
+                $this.html(settings.before + oldText.slice(0, -amount) + settings.after);
+                amount++;
+                if (amount <= oldText.length) {
+                  removeCharacter(amount);
+                } else {
+                  setTimeout(function() {
+                    insertCharacter(1);
+                  }, settings.delayInBetween);
+                }
+              }, settings.removalDelay);
+            };
+        insertCharacter = function(amount) {
+          setTimeout(function() {
+            $this.html(settings.before + settings.text.slice(0, amount) + settings.after);
+            amount++;
+            if (amount <= settings.text.length) {
+              insertCharacter(amount);
+            } else {
+              if (typeof settings.callback === "function") {
+                setTimeout(function() {
+                  settings.callback.apply($this.get(0));
+                }, settings.delayAfter);
+              }
+            }
+          }, settings.insertionDelay);
+        };
+        setTimeout(function() {
+          removeCharacter(1);
+        }, settings.delayBefore);
+      };
+      var counter = 0,
+          switcher = function() {
+            $textSwitcher.addClass('has-cursor');
+            $textSwitcher.teletype({
+              text: titles[counter++],
+              delayBefore: 1000,
+              delayAfter: 20000,
+              //after: '<span class="cursor">|',
+              callback: function() {
+                $(this).removeClass('has-cursor');
+                setTimeout(switcher, startAfterTimeInterval);
+              }
+            });
+            if (counter >= titles.length) {
+              counter = 0;
+            }
+          };
+      $(window).on('load', function() {
+        setTimeout(switcher, startAfterTimeInterval);
+      });
+    }
+  }
+})(); // Text Switcher
+</script>
+</body>
+</html>
