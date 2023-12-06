@@ -1,5 +1,8 @@
-<html lang="en" style="width:100%;height:150%;font-family:'Lato', sans-serif;font-weight:bold;color:#000000;font-size:150%;@-webkit-keyframes blink {
+<html lang="en" style="width:100%;height:100%;font-family:'Lato', sans-serif;font-weight:bold;color:#000000;font-size:150%;@-webkit-keyframes blink {
     from, to { border-color:transparent;">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
 <head>
 <meta charset="utf-8">
 <title>Text Switcher</title>
@@ -7,6 +10,7 @@
 <body style="width: 100%;
 	height: 200%;
 	font-family: 'Lato', sans-serif;
+	<!--font-family: 'Whisper', cursive;-->
   font-weight: bold;
   font-size:100%;
   color:black;
@@ -32,7 +36,7 @@ var $ = jQuery;
     var $textSwitcher = $('.text-switcher');
     if ($textSwitcher.length) {
       var titles = app.textSwitcherTitles,
-          startAfterTimeInterval = 1000;
+          startAfterTimeInterval = 500;
       titles.push($textSwitcher.text());
       $.fn.teletype = function(opts) {
         var $this = this,
@@ -83,18 +87,21 @@ var $ = jQuery;
       };
       var counter = 0,
           switcher = function() {
-            $textSwitcher.addClass('has-cursor');
-            $textSwitcher.teletype({
-              text: titles[counter++],
-              delayBefore: 1000,
-              delayAfter: 20000,
-              //after: '<span class="cursor">|',
-              callback: function() {
-                $(this).removeClass('has-cursor');
-                setTimeout(switcher, startAfterTimeInterval);
-              }
-            });
-            if (counter >= titles.length) {
+            
+			$textSwitcher.addClass('has-cursor');
+			$textSwitcher.teletype({
+				text: titles[counter++],
+				delayBefore: 500,
+				delayAfter: 45000,
+				//after: '<span class="cursor">|',
+				callback: function() {
+					$(this).removeClass('has-cursor');
+					setTimeout(switcher, startAfterTimeInterval);
+				}
+			});
+            
+			
+            if (counter >= titles.length -1) {
               counter = 0;
             }
           };
