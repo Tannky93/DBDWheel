@@ -27,11 +27,7 @@
 var app = {"textSwitcherTitles":[" Song Redeem (>20 mins) - $5 // 1 Sub // 500 Bits","Video Redeem( >20 mins) - $25 // 10 Subs // 2500 Bits"]};
 var $ = jQuery;
 (function() {
-  /**
-   * =============
-   * Text Switcher
-   * =============
-   **/
+  
   if ('textSwitcherTitles' in app) {
     var $textSwitcher = $('.text-switcher');
     if ($textSwitcher.length) {
@@ -93,7 +89,6 @@ var $ = jQuery;
 				text: titles[counter++],
 				delayBefore: 500,
 				delayAfter: 45000,
-				//after: '<span class="cursor">|',
 				callback: function() {
 					$(this).removeClass('has-cursor');
 					setTimeout(switcher, startAfterTimeInterval);
@@ -110,7 +105,7 @@ var $ = jQuery;
       });
     }
   }
-})(); // Text Switcher
+})();
 </script>
 </body>
 </html>
