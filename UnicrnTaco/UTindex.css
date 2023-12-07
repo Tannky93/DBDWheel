@@ -1,1 +1,60 @@
+<style>
+.body{
+  align-items: center;
+  display: flex;
+}
 
+.card {
+  padding: 16px 24px;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  border-style: double;
+  border-width: 4px;
+  margin-left: 15%;
+  margin-right: 15%;
+  position:relative;
+}
+}
+
+.card .img {
+  max-height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.card .card-infos {
+  padding: 16px;
+  margin-left:70px;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+</style>
