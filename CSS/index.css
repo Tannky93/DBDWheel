@@ -17,6 +17,9 @@
   margin: 8px;
   border-style: double;
   border-width: 4px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
 }
 
 .card img {
@@ -24,6 +27,7 @@
   width: auto;
   object-fit: cover;
   border-radius: 50%;
+  margin-right: 70px;
 }
 
 .card h2 {
@@ -37,7 +41,7 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .card.card-infos {
