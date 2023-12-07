@@ -1,8 +1,6 @@
 <html lang="en" style="width:100%;height:100%;font-family:'Lato', sans-serif;font-weight:bold;color:#000000;font-size:150%;@-webkit-keyframes blink {
     from, to { border-color:transparent;">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+
 <head>
 <meta charset="utf-8">
 <title>Hail Heidi Redeem Overlay Text</title>
@@ -10,7 +8,6 @@
 <body style="width: 100%;
 	height: 200%;
 	font-family: 'Lato', sans-serif;
-	<!--font-family: 'Whisper', cursive;-->
   font-weight: bold;
   font-size:100%;
   color:black;
@@ -24,7 +21,14 @@
   </div>
  
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script><script>
-var app = {"textSwitcherTitles":[" Song Redeem (<20 mins) - $5 // 500 Bits","Video Redeem (<20 mins) - $25 // 10 Subs // 2500 Bits"]};
+var app = {"textSwitcherTitles":[]};
+app.textSwitcherTitles.push(" Song Redeem (<20 mins) - $5 // 500 Bits");
+app.textSwitcherTitles.push("Video Redeem (<20 mins) - $25 // 10 Subs // 2500 Bits");
+
+var timeShown = 45;
+
+var tSDelay = timeShown *1000
+
 var $ = jQuery;
 (function() {
   
@@ -88,7 +92,7 @@ var $ = jQuery;
 			$textSwitcher.teletype({
 				text: titles[counter++],
 				delayBefore: 500,
-				delayAfter: 45000,
+				delayAfter: tSDelay,
 				callback: function() {
 					$(this).removeClass('has-cursor');
 					setTimeout(switcher, startAfterTimeInterval);
