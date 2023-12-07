@@ -1,4 +1,8 @@
 <style>
+.body{
+  align-items: center;
+  display: flex;
+}
 
 .card {
   padding: 16px 24px;
@@ -13,9 +17,10 @@
 }
 
 .card img {
-  height: 100%;
-  width: 120px;
+  max-height: 100%;
+  width: auto;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .card h2 {
