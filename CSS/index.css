@@ -1,12 +1,15 @@
 <style>
 
 .card {
+  padding: 16px 24px;
   overflow: hidden;
   height: 120px;
-  background: white;
+  background: purple;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 4px;
   display: flex;
   align-items: center;
+  margin: 8px;
 }
 
 .card img {
