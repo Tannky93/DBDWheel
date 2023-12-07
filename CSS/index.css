@@ -43,7 +43,7 @@
   margin-top: 10px;
 }
 
-.card.card-infos {
+.card .card-infos {
   padding: 16px;
   margin-left:70px;
 }
