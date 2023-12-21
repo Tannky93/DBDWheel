@@ -9,6 +9,19 @@ body {
     background-color: #929291;
 }
 
+.nav .back{
+    position: absolute;
+    top: 5%;
+    scale:2;
+    left: 5%;
+}
+.nav .home{
+    position: absolute;
+    top: 5%;
+    scale:2;
+    left: 10%;
+}
+
 .wrapper {
     width: 100%;
     height: 100vh;
